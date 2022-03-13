@@ -6,9 +6,16 @@ Refs:
 # k8s-HPA
 # ENV for mac
 <pre>
-Install microk8s  
-brew install ubuntu/microk8s/microk8s  
-    microk8s install --cpu=4 # default cpu is 2  
+Install docker
+
+<!-- Install microk8s  
+    brew install ubuntu/microk8s/microk8s  
+        microk8s install --cpu=4 # default cpu is 2   -->
+Install minikube
+    brew install kubectl && brew install --cask virtualbox && brew install minikube
+    minikube start --driver=hyperkit
+    minikube config set driver hyperkit
+
 Build app
     sh build.sh
 Use kubernetes-sigs-metrics-server
@@ -16,7 +23,7 @@ Use kubernetes-sigs-metrics-server
 Use Prometheus
     
 Load test:  
-    hey -c 20 -z 300s http://192.168.64.4/sayHello  
+    hey -c 20 -z 300s http://192.168.64.5/sayHello 
 
 View hpa and pod info  
     microk8s kubectl get hpa  

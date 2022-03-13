@@ -1,5 +1,5 @@
 minikube addons enable ingress
-cd k8s/kubernetes-sigs-metrics-server
+cd k8s/prometheus
 kubectl delete ingress k8s-hpa-app-ingress
 kubectl delete service k8s-hpa-app-service
 kubectl delete deployment k8s-hpa-app-deployment

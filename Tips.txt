@@ -1,33 +1,16 @@
-microk8s kubectl get pod
+kubectl get pod
 
-microk8s kubectl get service
-microk8s kubectl get ingress
+kubectl get service
+kubectl get ingress
 
-microk8s kubectl logs k8s-hpa-app-deployment-755dbb76d4-j9xzl
+kubectl logs k8s-hpa-app-deployment-755dbb76d4-j9xzl
 
-microk8s kubectl get nodes -o wide
-microk8s kubectl describe pod k8s-hpa-app-deployment-78b9d6d698-d68mp
-microk8s kubectl describe node
-microk8s kubectl get deployments
-microk8s kubectl edit deployment metrics-server
-microk8s kubectl describe ingress k8s-hpa-app-ingress
-microk8s kubectl get hpa
-microk8s kubectl top pod
-microk8s kubectl get pods
-
-microk8s kubectl get nodes
-kubectl describe node microk8s-vm
-microk8s kubectl get namespaces
-microk8s kubectl describe hpa landing
-
-Uninstall and reinstall
-
-microk8s stop
-microk8s uninstall
-multipass delete microk8s-vm
-multipass purge
-microk8s install --cpu=4 # default cpu is 2
-
-
-
-microk8s kubectl edit deployments.apps -n kube-system metrics-server
+kubectl get nodes -o wide
+kubectl describe pod k8s-hpa-app-deployment-78b9d6d698-d68mp
+kubectl describe node
+kubectl get deployments
+kubectl edit deployment metrics-server
+kubectl describe ingress k8s-hpa-app-ingress
+kubectl get hpa
+kubectl top pod
+kubectl get pods
