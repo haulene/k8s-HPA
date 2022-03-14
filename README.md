@@ -1,10 +1,12 @@
 # k8s-HPA
+<pre>
 Spring Boot + Kubernetes — Scalability with Horizontal Pod Autoscaler 
 Refs:
     https://medium.com/digital-software-architecture/spring-boot-kubernetes-scalability-with-horizontal-pod-autoscaler-hpa-faced00b52bf
     https://piotrminkowski.com/2020/11/05/spring-boot-autoscaling-on-kubernetes
     https://blog.marcnuri.com/prometheus-grafana-setup-minikube
     https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+</pre>
 # k8s-HPA
 # ENV for mac
 <pre>
