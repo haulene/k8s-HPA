@@ -6,6 +6,7 @@ Refs:
     https://piotrminkowski.com/2020/11/05/spring-boot-autoscaling-on-kubernetes
     https://blog.marcnuri.com/prometheus-grafana-setup-minikube
     https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
+    https://learnk8s.io/autoscaling-apps-kubernetes
 </pre>
 # k8s-HPA
 # ENV for mac
@@ -39,6 +40,12 @@ OR install pro-stack (TODO)
    
     helm install prometheus prometheus-community/kube-prometheus-stack
     kubectl port-forward deployment/prometheus-grafana 3000
+    kubectl port-forward deployment/prometheus-kube-prometheus-operator 9090
+    kubectl get pod -n default
+    kubectl port-forward prometheus-prometheus-kube-prometheus-prometheus-0 9090
+    
+
+
 
     username: admin
     password: prom-operator
