@@ -1,11 +1,11 @@
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: k8s-hpa-app
   namespace: default
 spec:
   scaleTargetRef:
-    apiVersion: apps/v1beta1
+    apiVersion: apps/v1
     kind: Deployment
     name: k8s-hpa-app-deployment
   minReplicas: 1
@@ -16,4 +16,4 @@ spec:
       name: cpu
       target: 
         type: Utilization
-        averageUtilization: 10
+        averageUtilization: 8
